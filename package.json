@@ -48,6 +48,5 @@
   },
   "ct3aMetadata": {
     "initVersion": "7.37.0"
-  },
-  "packageManager": "npm@10.2.4"
+  }
 }
