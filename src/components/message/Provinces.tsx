@@ -1,7 +1,7 @@
 'use client'
 
 import { useActions, useUIState } from 'ai/rsc';
-import {AI} from "~/lib/chat/action";
+import {AI} from "~/lib/chat/actions";
 
 interface Province {
     name: string;

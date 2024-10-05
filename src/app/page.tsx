@@ -1,20 +1,20 @@
-import Link from "next/link";
+import { HydrateClient } from "~/trpc/server";
+import { AI } from "~/lib/chat/actions";
+import {nanoid} from "~/lib/utils";
+import Chat from "~/app/_components/Chat";
 
-import { LatestPost } from "~/app/_components/post";
-import { api, HydrateClient } from "~/trpc/server";
-import Chat from "./_components/Chat";
 
-export default async function Home() {
-  const hello = await api.post.hello({ text: "from tRPC" });
+export default async function Home(){
 
-  void api.post.getLatest.prefetch();
+const id = nanoid()
 
   return (
     <HydrateClient>
       <main className="flex min-h-screen flex-col items-center justify-center bg-gradient-to-b from-[#2e026d] to-[#15162c] text-white">
         <div className="container flex flex-col items-center justify-center gap-12 px-4 py-16">
-          <Chat />
-
+            <AI initialAIState={{ chatId: id, messages: [] }}>
+                <Chat id={id}  missingKeys={[]} />
+            </AI>
           {/* <LatestPost /> */}
         </div>
       </main>
