@@ -1,6 +1,6 @@
 
 
-import ExternalLink from "~/app/_components/ExternalLink";
+import ExternalLink from "~/components/chat/ExternalLink";
 
 export default function EmptyScreen() {
     return (

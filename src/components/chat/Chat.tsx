@@ -1,9 +1,9 @@
 'use client'
 
 import { cn } from '~/lib/utils'
-import { ChatList} from "~/app/_components/ChatList";
-import ChatPanel from "~/app/_components/ChatPanel";
-import EmptyScreen from "~/app/_components/EmptyScreen";
+import { ChatList} from "~/components/chat/ChatList";  
+import ChatPanel from "~/components/chat/ChatPanel";
+import EmptyScreen from "~/components/chat/EmptyScreen";
 import { useEffect, useState } from 'react'
 import { useUIState } from 'ai/rsc'
 import { Message, Session } from '~/lib/types'

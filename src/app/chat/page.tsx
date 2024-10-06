@@ -1,7 +1,7 @@
 import { HydrateClient } from "~/trpc/server";
 import { AI } from "~/lib/chat/actions";
 import {nanoid} from "~/lib/utils";
-import Chat from "~/app/_components/Chat";
+import Chat from "~/components/chat/Chat";
 
 
 export default async function Home(){
